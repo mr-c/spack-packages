@@ -18,6 +18,7 @@ class PyCwlUtils(PythonPackage):
 
     license("Apache-2.0")
 
+    version("0.44", "dad3c6a0ed55d6661fa7841713489555a1be6429396a2362b12fe6423c90da0c")
     version("0.42", sha256="94e585dcc3082416c657ae446804b5e60f6363045743cbd64814ed85402e3f87")
     version("0.37", sha256="7b69c948f8593fdf44b44852bd8ef94c666736ce0ac12cf6e66e2a72ad16a773")
     version("0.21", sha256="583f05010f7572f3a69310325472ccb6efc2db7f43dc6428d03552e0ffcbaaf9")
@@ -34,10 +35,7 @@ class PyCwlUtils(PythonPackage):
     depends_on("py-rdflib", type=("build", "run"))
     depends_on("py-requests", type=("build", "run"))
     depends_on("py-cachecontrol", type=("build", "run"))
-    depends_on("py-schema-salad@8.3.20220825114525:8", when="@:0.31", type=("build", "run"))
-    # intermediate versions 0.32:0.36 may not require 8.8, but should work with this stricter
-    # requirement
-    depends_on("py-schema-salad@8.8.20250205075315:8", when="@0.32:", type=("build", "run"))
+    depends_on("py-schema-salad@8.10.20261106141337:8", type=("build", "run"))
     depends_on("py-ruamel-yaml@0.17.6:0.18", when="@0.30:0.41", type=("build", "run"))
     depends_on("py-ruamel-yaml@0.17.6:0.19", when="@0.42:", type=("build", "run"))
     depends_on("py-typing-extensions", when="@0.37 ^python@:3.9", type=("build", "run"))

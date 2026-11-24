@@ -15,6 +15,7 @@ class PyAstSerialize(PythonPackage):
 
     license("MIT")
 
+    version("0.12.1", sha256="5285a390caf1c44368ae270f037f797b91427d138b7d43cad0f1fda4c83518d9")
     version("0.6.0", sha256="aadd3ffcf4858c9726bf3515f7b199c7eadbe504f96028e4a87172c0da65a8fe")
     version("0.5.0", sha256="5880091bfe6f4f986f22866375c2e884843e7a0b6343ae41aeea659613d879b6")
 

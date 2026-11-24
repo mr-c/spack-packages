@@ -15,6 +15,7 @@ class PyLibrt(PythonPackage):
 
     license("MIT AND PSF-2.0")
 
+    version("0.16.0", sha256="ac38d6d8d66bf3d744148dbbc0b8e193e195a51e364ed55e224631f5721891fc")
     version("0.15.0", sha256="4e66cbe84437497d951b799d3e1551291b6fb3d643820a7014b3655d57a59162")
     version("0.11.0", sha256="075dc3ef4458a278e0195cbf6ac9d38808d9b906c5a6c7f7f79c3888276a3fb1")
     version("0.9.0", sha256="a0951822531e7aee6e0dfb556b30d5ee36bbe234faf60c20a16c01be3530869d")

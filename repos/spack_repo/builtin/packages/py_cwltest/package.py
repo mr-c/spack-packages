@@ -31,5 +31,5 @@ class PyCwltest(PythonPackage):
         depends_on("py-setuptools-scm@8.0.4:")
 
     with default_args(type=("build", "run")):
-        depends_on("py-schema-salad@5.0.20200220195218:9")
+        depends_on("py-schema-salad@8.10.20261106141337:9")
         depends_on("py-junit-xml@1.8:")

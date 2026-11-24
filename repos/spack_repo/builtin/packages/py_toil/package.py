@@ -18,6 +18,7 @@ class PyToil(PythonPackage):
     maintainers("mr-c")
     license("Apache-2.0", checked_by="mr-c")
 
+    version("9.6.0", sha256="5469d45e06e65d6ffadfc22918952460f80da4611ec5318a5de62b6192db2f16")
     version("9.5.0", sha256="dae9a12b0f277355170129be38406c831da47054758e64d6693e18d7e5b45d3f")
 
     depends_on("python@3.10:", type=("build", "run"))
@@ -65,7 +66,8 @@ class PyToil(PythonPackage):
 
     with default_args(type=("build", "run")):
         depends_on("py-dill@0.3.2:0.4")
-        depends_on("py-requests@:2.33.1")
+        depends_on("py-requests@:2.33.1", when="@:9.5.0")
+        depends_on("py-requests@:2.33.1", when="@9.6.0:")
         depends_on("py-docker@6.1")
         depends_on("py-urllib3@1.26:2")
         depends_on("py-python-dateutil")
@@ -79,8 +81,8 @@ class PyToil(PythonPackage):
         depends_on("py-typing-extensions@4.6.2:4")
         depends_on("py-coloredlogs@15:15")
         depends_on("py-prompt-toolkit@3")
-        depends_on("py-cwltool@3.2.20260413085819", when="+cwl")
-        depends_on("py-schema-salad@8.4.20230128170514:8", when="+cwl")
+        depends_on("py-cwltool@=3.2.20260413085819", when="@9.5.0 +cwl")
+        depends_on("py-cwltool@=3.3.20260925135507", when="@9.6.0 +cwl")
         depends_on("py-galaxy-tool-util@:27", when="+cwl")
         depends_on("py-galaxy-util@:27", when="+cwl")
         depends_on("py-ruamel-yaml@0.15:0.19.1", when="+cwl")
